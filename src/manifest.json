@@ -1,0 +1,25 @@
+
+{
+    "name": "ChatGPT Query Options",
+    "description": "Adds a menu to append common ChatGPT query options",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+        "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background" : {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ]
+    
+}
